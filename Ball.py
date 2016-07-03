@@ -60,7 +60,7 @@ class Ball:
 
         """Удар с шаром игрока"""
         if ((self.x - player.x)**2+(self.y - player.y)**2<(self.r+player.r)**2):
-            mod = math.sqrt((self.x - player.x)**2+(self.y - player.y)**2)       #Содуль вектора, соединящего центры шаров
+            mod = math.sqrt((self.x - player.x)**2+(self.y - player.y)**2)       #Модуль вектора, соединящего центры шаров
             cosa = (self.x-player.x)/mod                                         #Косинус угла наклона вектора, соединяющего центры шаров
             sina = (self.y-player.y)/mod
             self.x = player.x + (self.r+player.r)*(self.x-player.x)/mod

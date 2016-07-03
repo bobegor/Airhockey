@@ -17,7 +17,7 @@ class Ball:
     def speed_cal(self,player,cosa,sina):
         speedx = (self.Vx-player.vx)*sina - (self.Vy-player.vy)*cosa
         speedy = (self.Vx-player.vx)*cosa + (self.Vy-player.vy)*sina
-        sqrtD = math.sqrt(player.weight**2*speedy**2+(player.weight+self.weight)*player.weight*speedx**2)
+        sqrtD = math.sqrt((player.weight+self.weight)**2*speedy**2+(player.weight+self.weight)**2*speedx**2)
         speedy1 = (self.weight*speedy+sqrtD)/(self.weight+player.weight)
         speedx1 = speedx
         sx1 = speedx1*sina + speedy1*cosa + player.vx
